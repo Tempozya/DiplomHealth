@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    x:Class="Health.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Application.Resources>
+        <Style x:Key="PageHeader" TargetType="Label">
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="FontFamily" Value="Roboto-Bold" />
+            <Setter Property="FontSize" Value="30" />
+        </Style>
+
+        <Style x:Key="SubHeader" TargetType="Label">
+            <Setter Property="TextColor" Value="#d9d9d9" />
+            <Setter Property="FontSize" Value="20" />
+        </Style>
+
+
+    </Application.Resources>
+
+</Application>

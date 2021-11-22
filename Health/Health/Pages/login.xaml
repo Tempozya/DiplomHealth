@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="Health.Pages.login" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Health.Custom">
+
+
+
+    <StackLayout Padding="0" BackgroundColor="#1f1a30">
+
+        <Grid>
+            <StackLayout Margin="0" Padding="0">
+                <Frame BackgroundColor="#1f1a30" HeightRequest="130" HorizontalOptions="FillAndExpand">
+                    <Image Aspect="AspectFit" Source="medicine.png" />
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Margin="15,160,15,0">
+
+                <Frame BackgroundColor="#282438" CornerRadius="30" HasShadow="True" HeightRequest="370" HorizontalOptions="FillAndExpand">
+                    <StackLayout>
+                        <StackLayout HorizontalOptions="CenterAndExpand">
+                            <Label FontAttributes="Bold" FontSize="Title" Opacity="5" Text="Авторизация" TextColor="White" />
+                        </StackLayout>
+
+                        <StackLayout Margin="0,25,0,0">
+                            <Frame Margin="0" Padding="0" BackgroundColor="Transparent" BorderColor="DarkGray" CornerRadius="15" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame Margin="10" Padding="0" BackgroundColor="Transparent" CornerRadius="0" HeightRequest="25" HorizontalOptions="Start" WidthRequest="25">
+                                        <Image Aspect="AspectFit" Source="user.png" />
+                                    </Frame>
+                                    <local:CustomEntry x:Name="txtLogin" Margin="0,0,15,0" HorizontalOptions="FillAndExpand" Placeholder="Логин" TextColor="White" />
+
+                                </StackLayout>
+
+                            </Frame>
+
+                            <Frame Margin="0,15,0,0" Padding="0" BackgroundColor="Transparent" BorderColor="DarkGray" CornerRadius="15" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame Margin="10" Padding="0" BackgroundColor="Transparent" CornerRadius="0" HeightRequest="25" HorizontalOptions="Start" WidthRequest="25">
+                                        <Image Aspect="AspectFit" Source="password.png" />
+                                    </Frame>
+                                    <local:CustomEntry x:Name="txtPass" Margin="0,0,15,0" HorizontalOptions="FillAndExpand" IsPassword="True" Placeholder="Пароль" TextColor="White" />
+
+
+                                </StackLayout>
+
+                            </Frame>
+                        </StackLayout>
+
+
+
+                        <Button x:Name="btnAuth" Margin="30,20,30,5" Padding="0,20,0,20" BackgroundColor="#0df5e3" CornerRadius="30" FontAttributes="Bold" Text="Вход" TextColor="#034650 " />
+
+                        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+
+
+
+                            <Label FontAttributes="Bold" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="End" Text="Забыли пароль?" TextColor="#3fe8df" VerticalTextAlignment="Center" />
+
+                        </StackLayout>
+
+                        <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal" VerticalOptions="EndAndExpand">
+                            <Label FontAttributes="Bold" HorizontalTextAlignment="End" Text="Нет аккаунта?" TextColor="#645c65" VerticalTextAlignment="Center" />
+                            <Label FontAttributes="Bold" HorizontalTextAlignment="End" Text="Зарегистрируйтесь" TextColor="#3fe8df" VerticalTextAlignment="Center">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Reg" />
+                                </Label.GestureRecognizers>
+                            </Label>
+
+                        </StackLayout>
+
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+        </Grid>
+
+
+
+    </StackLayout>
+
+
+</ContentPage>

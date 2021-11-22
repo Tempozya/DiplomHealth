@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Health.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Health.Custom"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <ControlTemplate x:Key="TabItemTemplate">
+                <Grid RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Image
+                        Grid.Row="0"
+                        Margin="6"
+                        HeightRequest="35"
+                        HorizontalOptions="Center"
+                        Source="{TemplateBinding CurrentIcon}"
+                        VerticalOptions="Center"
+                        WidthRequest="25" />
+
+                </Grid>
+            </ControlTemplate>
+
+            <ControlTemplate x:Key="FabTabItemTemplate">
+                <Grid>
+                    <ImageButton
+                        Margin="6"
+                        Padding="10"
+                        CornerRadius="30"
+                        HeightRequest="100"
+                        HorizontalOptions="Center"
+                        InputTransparent="True"
+                        Source="{TemplateBinding CurrentIcon}"
+                        VerticalOptions="Center"
+                        WidthRequest="60">
+                    </ImageButton>
+                </Grid>
+            </ControlTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <Grid BackgroundColor="#1f1a30" RowDefinitions="*,90">
+
+        <StackLayout Padding="20">
+            <Grid ColumnDefinitions="*,Auto" HorizontalOptions="Fill">
+                <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="Center">
+                    <Label Style="{StaticResource PageHeader}" Text="Александр" />
+                </StackLayout>
+
+                <Frame
+                    Grid.Column="1"
+                    Padding="10"
+                    CornerRadius="50"
+                    HeightRequest="50"
+                    HorizontalOptions="Center"
+                    IsClippedToBounds="True"
+                    VerticalOptions="Center"
+                    WidthRequest="50">
+                    <Frame.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="#34807d" />
+                            <GradientStop Color="#645c65" />
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                    <Image
+                        Margin="-20"
+                        Aspect="AspectFill"
+                        HeightRequest="100"
+                        Source="avatar.jpg"
+                        WidthRequest="100">
+                    </Image>
+                </Frame>
+
+            </Grid>
+
+            <Frame
+                Margin="0,20,0,0"
+                CornerRadius="12"
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+                <Frame.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#37b4ad" />
+                        <GradientStop Color="#464ab8" />
+                    </LinearGradientBrush>
+                </Frame.Background>
+
+                <Grid ColumnDefinitions="Auto,Auto" RowDefinitions="Auto,Auto">
+                    <StackLayout>
+                        <Image
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="0"
+                            HeightRequest="60"
+                            HorizontalOptions="Start"
+                            Source="patient.png"
+                            WidthRequest="60">
+                        </Image>
+
+                    </StackLayout>
+
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Margin="0,0,0,0"
+                        FontFamily="Roboto-Bold"
+                        FontSize="17"
+                        HorizontalOptions="Start"
+                        Text="Диагностика COVID-19"
+                        TextColor="White"
+                        VerticalOptions="StartAndExpand" />
+                    <StackLayout
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Margin="0,0,0,0"
+                        Padding="0,0,0,-5"
+                        HorizontalOptions="CenterAndExpand"
+                        Orientation="Horizontal"
+                        VerticalOptions="EndAndExpand">
+                        <Label
+                            Padding="0,0,0,0"
+                            FontAttributes="Bold"
+                            FontSize="14"
+                            HorizontalTextAlignment="Start"
+                            Text="Пройдите тест, чтобы оценить своё состояние"
+                            TextColor="#39304d"
+                            VerticalTextAlignment="Center" />
+                        <Image
+                            Margin="0,3,8,0"
+                            HeightRequest="18"
+                            HorizontalOptions="CenterAndExpand"
+                            Source="arrow.png"
+                            VerticalOptions="Center"
+                            WidthRequest="18" />
+
+                    </StackLayout>
+
+
+
+
+
+
+
+                </Grid>
+            </Frame>
+
+
+            <Frame
+                Margin="0,15,0,0"
+                Padding="0"
+                CornerRadius="12"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                WidthRequest="350">
+                <Frame.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#37b4ad" />
+                        <GradientStop Color="#464ab8" />
+                    </LinearGradientBrush>
+                </Frame.Background>
+                <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Horizontal"
+                    VerticalOptions="FillAndExpand">
+                    <local:CustomEntry
+                        x:Name="txtSearch"
+                        Margin="10,0,0,0"
+                        HorizontalOptions="FillAndExpand"
+                        Placeholder="Чем могу вам помочь?"
+                        TextColor="White" />
+                    <Image
+                        Margin="0,0,0,0"
+                        HeightRequest="30"
+                        HorizontalOptions="CenterAndExpand"
+                        Source="search.png"
+                        VerticalOptions="Center"
+                        WidthRequest="30" />
+                </StackLayout>
+
+            </Frame>
+
+
+        </StackLayout>
+        <Frame
+            Margin="0,20,0,0"
+            Padding="0"
+            CornerRadius="12"
+            HorizontalOptions="Center"
+            VerticalOptions="End">
+            <Button CornerRadius="13" Text="Выход" />
+        </Frame>
+
+
+
+
+
+
+        <StackLayout
+            Grid.Row="1"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="FillAndExpand">
+            <Frame
+                Margin="0,0,0,0"
+                Padding="0"
+                BorderColor="#342e4a"
+                CornerRadius="30"
+                HorizontalOptions="CenterAndExpand"
+                WidthRequest="300">
+                <xct:TabView
+                    Grid.Row="1"
+                    BackgroundColor="#342e4a"
+                    HorizontalOptions="CenterAndExpand"
+                    TabStripHeight="60"
+                    TabStripPlacement="Bottom"
+                    VerticalOptions="Fill">
+
+
+                    <xct:TabViewItem ControlTemplate="{StaticResource TabItemTemplate}" Icon="home.png" />
+                    <xct:TabViewItem ControlTemplate="{StaticResource TabItemTemplate}" Icon="chat.png" />
+
+
+                    <xct:TabViewItem ControlTemplate="{StaticResource TabItemTemplate}" Icon="email.png" />
+
+                    <xct:TabViewItem ControlTemplate="{StaticResource TabItemTemplate}" Icon="notification.png" />
+                    <xct:TabViewItem ControlTemplate="{StaticResource TabItemTemplate}" Icon="user.png" />
+
+
+
+
+                </xct:TabView>
+            </Frame>
+        </StackLayout>
+
+
+
+
+    </Grid>
+
+</ContentPage>
